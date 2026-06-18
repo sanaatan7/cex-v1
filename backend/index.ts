@@ -4,7 +4,24 @@ const app = express();
 const BALANCES = {};
 
 const ORDERBOOK = {
-  SOL: {},
+  SOL: {
+    BIDS:{
+        299:{
+            totalQty: 10,
+            orders:[{
+                userId: 1,
+                FilledQty: 3,
+                orderId:10,
+                ceatedAt: 17jun 2026 3:30 PM,
+            }]
+        }
+    },
+    ASKS: {
+        200: {
+            
+        }
+    }
+  },
   BTC: {},
 };
 
@@ -47,3 +64,5 @@ app.get("/balance/usd")
 
 app.get("/balance")
 app.listen(3000)
+
+

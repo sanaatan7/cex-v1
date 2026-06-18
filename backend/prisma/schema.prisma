@@ -12,11 +12,15 @@ datasource db {
   provider = "postgresql"
 }
 
-model user {}
+model user {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  password String
+  age      Int
+}
 
-model Stock {}
-
-model order {}
-
-model Fills {}
-
+//model Stock {}
+//
+//model order {}
+//
+//model Fills {}
